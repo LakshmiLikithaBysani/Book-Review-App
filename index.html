@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Review App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📚 Book Review App</h1>
+
+        <div class="form-box">
+
+            <h2>Add Book Review</h2>
+
+            <input
+                type="text"
+                id="bookName"
+                placeholder="Book Name"
+            >
+
+            <input
+                type="text"
+                id="author"
+                placeholder="Author Name"
+            >
+
+            <select id="rating">
+                <option value="">Select Rating</option>
+                <option value="1">⭐ 1</option>
+                <option value="2">⭐⭐ 2</option>
+                <option value="3">⭐⭐⭐ 3</option>
+                <option value="4">⭐⭐⭐⭐ 4</option>
+                <option value="5">⭐⭐⭐⭐⭐ 5</option>
+            </select>
+
+            <textarea
+                id="review"
+                placeholder="Write your review..."
+            ></textarea>
+
+            <button onclick="addReview()">
+                Add Review
+            </button>
+
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search book..."
+                onkeyup="displayReviews()"
+            >
+
+        </div>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h3 id="totalBooks">0</h3>
+                <p>Total Books</p>
+            </div>
+
+            <div class="stat">
+                <h3 id="averageRating">0</h3>
+                <p>Average Rating</p>
+            </div>
+
+        </div>
+
+        <div id="reviewList"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
